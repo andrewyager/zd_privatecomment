@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- http://garden.zendesk.com -->
+  <link href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock,npm/@zendeskgarden/css-grid,npm/@zendeskgarden/css-buttons,npm/@zendeskgarden/css-forms,npm/@zendeskgarden/css-utilities" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <div id="content"></div>
+  <div id="loading" class="hidden">
+    <center>
+      <img src="dots.gif" />
+    </center>
+  </div>
+  <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+  <script id="error-template" type="text/x-handlebars-template">
+  <p>{{status}} - {{statusText}} error. Please report a bug to the Helpdesk.</p>
+  </script>
+  <script id="comment-template" type="text/x-handlebars-template">
+    <div class="c-txt u-mb-sm">
+      <label class="c-txt__label" for="message">Enter your comment:</label>
+      <textarea class="c-txt__input c-txt__input--area is-resizable" rows="5" name="message" id="message" placeholder="Enter your private comment here and click submit to update while you are editing the ticket.">{{ message }}</textarea>
+    </div>
+    <div class="c-txt u-mb-sm">
+      <button id="submitButton" class="c-btn c-btn--primary">Submit Comment</button></td>
+    </div>
+  </script>
+  <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
